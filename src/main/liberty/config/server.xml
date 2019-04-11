@@ -1,0 +1,12 @@
+<server description="Sample Liberty server">
+
+  <featureManager>
+    <feature>jaxrs-2.1</feature>
+    <feature>jsonp-1.1</feature>
+  </featureManager>
+
+  <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
+  <keyStore id="defaultKeyStore" password="Liberty" />
+
+  <webApplication location="io.openliberty.hello.world.war" contextRoot="/"/>
+</server>
